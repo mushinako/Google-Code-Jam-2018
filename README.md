@@ -14,7 +14,7 @@ The solutions, unless indicated, passed all tests.
 - [x] Number Guessing
 - [x] Senate Evacuation
 - [x] Steed 2: Cruise Control
-- [ ] Bathroom Stalls: Correct small-1 and small-2 but incorrect large
+- [ ] Bathroom Stalls - Correct small-1 and small-2 but incorrect large
 
 ### Qualification
 - [x] Saving The Universe Again
