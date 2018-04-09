@@ -12,13 +12,13 @@ The first line of the input gives the number of test cases, **T**. **T** test ca
 It is guaranteed that there is always a way to rotate the ship in the desired manner for the values of **A** allowed in this problem.
 
 ## Output
-For each test case, first output one line containing `Case #x:`, where `x` is the test case number (starting from 1). Then, output three more lines with three rational values each: the `x`, `y`, and `z` coordinates of one of your three provided face-centers, as described above. You are welcome to use decimal (e.g., 0.000123456) or scientific notation (e.g., 1.23456e-4).
+For each test case, first output one line containing `Case #x:`, where `x` is the test case number (starting from 1). Then, output three more lines with three rational values each: the `x`, `y`, and `z` coordinates of one of your three provided face-centers, as described above. You are welcome to use decimal (e.g., `0.000123456`) or scientific notation (e.g., `1.23456e-4`).
 
 Your answer will be considered correct if and only if all of the following are true:
 
-1. The distance (in km) from each point to the origin must be between 0.5 - 10-6 and 0.5 + 10-6, inclusive.
-2. The angles (in radians) between segments connecting the origin to each point must be between π/2 - 10-6 and π/2 + 10-6, inclusive.
-3. The area of the shadow (in km2), computed by projecting all 8 vertices onto the y = -3 plane and finding the area of the convex hull of those projected points, must be between A - 10-6 and A + 10-6, inclusive. We will compute the vertices as +/- p1 +/- p2 +/- p3 (that is, for each pi we add either pi or -pi to the total using vector addition), where p1, p2, and p3 are the face-centers that you provide.
+1. The distance (in km) from each point to the origin must be between `0.5 - 10⁻⁶` and `0.5 + 10⁻⁶`, inclusive.
+2. The angles (in radians) between segments connecting the origin to each point must be between `π/2 - 10⁻⁶` and `π/2 + 10⁻⁶`, inclusive.
+3. The area of the shadow (in km²), computed by projecting all 8 vertices onto the `y = -3` plane and finding the area of the convex hull of those projected points, must be between `A - 10⁻⁶` and `A + 10⁻⁶`, inclusive. We will compute the vertices as `+/- p1 +/- p2 +/- p3` (that is, for each pi we add either `pi` or `-pi` to the total using vector addition), where p1, p2, and p3 are the face-centers that you provide.
 
 Please note that you might need to output more than 6 digits after the decimal point to safely pass the checks mentioned above. If there are multiple acceptable answers, you may output any one of them.
 
