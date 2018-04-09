@@ -1,3 +1,8 @@
+import sys
+
+def eprint(*args, **kwargs):
+    fprint(*args, file=sys.stderr, **kwargs)
+
 def fprint(*args, **kwargs):
     print(*args, flush=True, **kwargs)
 
@@ -6,6 +11,12 @@ def do_test_case():
     n = int(input())
 
     while True:
+
+        eprint(flush=True)
+        eprint('a: {}'.format(a), flush=True)
+        eprint('b: {}'.format(b), flush=True)
+        eprint('# of tries left: {}'.format(n), flush=True)
+
         k = (a + b + 1) // 2
         if k <= a:
             k += 1
@@ -16,7 +27,8 @@ def do_test_case():
             if k <= a:
                 raise ValueError('No candidate left!')
 
-        fprint(k, flush=True)
+        n -= 1
+        fprint(k)
 
         # Analyze feedback
         f = input()

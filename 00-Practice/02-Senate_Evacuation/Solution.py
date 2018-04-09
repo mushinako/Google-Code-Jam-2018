@@ -2,7 +2,10 @@ from string import ascii_uppercase as uc
 
 def senate_evacuation(party_members):
     plan = []
+
     while sum(party_members) > 0:
+        # Remove 1 from 2 parties with most people and check after. If
+        # condition violated, send the second person back to fire!
         p0 = party_members.index(max(party_members))
         party_members[p0] -= 1
         p1 = party_members.index(max(party_members))
