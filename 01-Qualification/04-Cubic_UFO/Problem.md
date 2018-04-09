@@ -58,3 +58,5 @@ In Sample Case #1, there is no need to rotate the cube at all; with two of its f
 In Sample Case #2, one possible solution is to tell the aliens to give the cube a 45 degree turn around the x = y = 0 line, creating a shadow that is a rectangle with dimensions of 1 and sqrt(2).
 
 The following rough image shows the cubes and shadows for Sample Cases #1 and #2. The sun is shown for clarity, but remember that it is actually a point infinitely far away along the y-axis.
+
+![Figure](./Figure.svg)
