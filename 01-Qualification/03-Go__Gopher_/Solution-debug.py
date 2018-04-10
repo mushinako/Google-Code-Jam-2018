@@ -1,5 +1,5 @@
 import sys
-import math
+from math import ceil, sqrt
 
 def int_input():
     x = input()
@@ -16,10 +16,10 @@ def eprint(*args, **kwargs):
 def fprint(*args, **kwargs):
     print(*args, flush=True, **kwargs)
 
-def do_test_case():
+def go__gopher_():
     a = int(input())
 
-    ## As A is either 20 or 200, set wanted dimensions
+    ## As A is either 20 or 200, we can set wanted dimensions
     # if a == 20:
     #     dm = [4, 5]
     # elif a == 200:
@@ -27,7 +27,7 @@ def do_test_case():
     # else:
     #     raise ValueError('Testing case not 20 or 200!')
 
-    dm = math.ceil(math.sqrt(a))
+    dm = ceil(sqrt(a))
     # Set initial at 2,2
     fprint('2 2')
     a, b = int_input()
@@ -113,9 +113,13 @@ def do_test_case():
             return 0
         eprint()
 
-t = int(input())
+def main():
+    t = int(input())
 
-while t > 0:
-    do_test_case()
-    eprint('\n')
-    t -= 1
+    while t > 0:
+        go__gopher_()
+        eprint('\n')
+        t -= 1
+
+if __name__ == '__main__':
+    main()

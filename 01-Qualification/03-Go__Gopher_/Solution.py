@@ -1,4 +1,4 @@
-import math
+from math import ceil, sqrt
 
 def int_input():
     x = input()
@@ -12,10 +12,10 @@ def int_input():
 def fprint(*args, **kwargs):
     print(*args, flush=True, **kwargs)
 
-def do_test_case():
+def go__gopher_():
     a = int(input())
 
-    dm = math.ceil(math.sqrt(a))
+    dm = ceil(sqrt(a))
     # Set initial at 2,2
     fprint('2 2')
     a, b = int_input()
@@ -72,8 +72,11 @@ def do_test_case():
         else:
             return 0
 
-t = int(input())
+def main():
+    t = int(input())
+    while t > 0:
+        go__gopher_()
+        t -= 1
 
-while t > 0:
-    do_test_case()
-    t -= 1
+if __name__ == '__main__':
+    main()

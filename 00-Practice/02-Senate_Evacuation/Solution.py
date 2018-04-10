@@ -17,9 +17,13 @@ def senate_evacuation(party_members):
             plan.append(uc[p0] + uc[p1])
     return ' '.join(plan)
 
-t = int(input())
-for i in range(1, t+1):
-    n = int(input())
-    l = [int(s) for s in input().split(' ')]
-    r = senate_evacuation(l)
-    print('Case #{}: {}'.format(i, r))
+def main():
+    t = int(input())
+    for i in range(1, t+1):
+        n = int(input())
+        l = [int(s) for s in input().split(' ')]
+        r = senate_evacuation(l)
+        print('Case #{}: {}'.format(i, r))
+
+if __name__ == '__main__':
+    main()

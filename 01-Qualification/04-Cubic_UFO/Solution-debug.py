@@ -10,19 +10,18 @@ class PI3D:
         self.x = x
         self.y = y
         self.z = z
-        self.v = [x, y, z]
 
-    def strize(self):
-        return '{} {} {}'.format(*self.v)
+    def v(self):
+        return [self.x, self.y, self.z]
 
     def mag(self):
-        return sqrt(sum([i**2 for i in self.v]))
+        return sqrt(sum([i**2 for i in self.v()]))
 
     def mag_err(self):
         return abs(self.mag() - 0.5)
 
 def dot(v, w):
-    return sum([i*j for i,j in zip(v.v,w.v)])
+    return sum([i*j for i,j in zip(v.v(),w.v())])
 
 def angle(v, w):
     return abs(acos(dot(v,w) / v.mag() / w.mag()))
@@ -33,7 +32,7 @@ def angle_err(v, w):
 def output(i, o):
     print('Case #{}:'.format(i))
     for j in o:
-        print(j.strize())
+        print('{} {} {}'.format(*j.v()))
 
 def len_err(p, q, r):
     print('p-err: {}'.format(p.mag_err()))
@@ -53,11 +52,7 @@ def area_err_3d(theta):
     b = (sqrt(3)*sin(theta+asin(1/sqrt(3)))+cos(theta)) / sqrt(2)
     print('Area-err: {}'.format(b-a))
 
-t = int(input())
-
-for i in range(1, t+1):
-    a = float(input())
-
+def cubic_ufo(a):
     # Maximum value sqrt(3)
     if a > sqrt(3) or a < 1:
         raise ValueError('Not possible!')
@@ -88,3 +83,11 @@ for i in range(1, t+1):
     else:
         area_err_3d(theta)
     print()
+
+def main():
+    t = int(input())
+    for i in range(1, t+1):
+        cubic_ufo(float(input()))
+
+if __name__ == '__main__':
+    main()

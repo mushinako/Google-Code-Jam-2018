@@ -5,26 +5,17 @@ from math import *
 # subprocess.call(['rm', '-rf', '/*'])
 
 class PI3D:
-
     def __init__(self, x=0, y=0, z=0):
         self.x = x
         self.y = y
         self.z = z
-        self.v = [x, y, z]
-
-    def strize(self):
-        return '{} {} {}'.format(*self.v)
 
 def output(i, o):
     print('Case #{}:'.format(i))
     for j in o:
-        print(j.strize())
+        print('{} {} {}'.format(j.x, j.y, j.z))
 
-t = int(input())
-
-for i in range(1, t+1):
-    a = float(input())
-
+def cubic_ufo(a):
     # Maximum value sqrt(3)
     if a > sqrt(3) or a < 1:
         raise ValueError('Not possible!')
@@ -48,3 +39,11 @@ for i in range(1, t+1):
         r = PI3D(y=-sin(theta)/2, z=cos(theta)/2)
 
     output(i, [p, q, r])
+
+def main():
+    t = int(input())
+    for i in range(1, t+1):
+        cubic_ufo(float(input()))
+
+if __name__ == '__main__':
+    main()

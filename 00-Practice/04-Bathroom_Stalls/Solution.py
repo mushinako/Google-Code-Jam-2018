@@ -1,10 +1,6 @@
 from math import ceil
 
-t = int(input())
-
-for i in range(1, t+1):
-    n, k = [int(r) for r in input().split(' ')]
-
+def bathroom_stalls(n, k):
     # Mark numbers with frequency
     n = [[n, 1]]
 
@@ -41,4 +37,14 @@ for i in range(1, t+1):
     while k > n[m][1]:
         k -= n[m][1]
         m += 1
-    print('Case #{}: {} {}'.format(i, ceil((n[m][0]-1)/2), (n[m][0]-1)//2))
+    return [ceil((n[m][0]-1)/2), (n[m][0]-1)//2]
+
+def main():
+    t = int(input())
+    for i in range(1, t+1):
+        n, k = [int(r) for r in input().split(' ')]
+        m = bathroom_stalls(n, k)
+        print('Case #{}: {} {}'.format(i, *m))
+
+if __name__ == '__main__':
+    main()

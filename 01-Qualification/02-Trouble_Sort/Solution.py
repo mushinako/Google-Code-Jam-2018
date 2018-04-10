@@ -1,9 +1,4 @@
-t = int(input())
-
-for i in range(1, t+1):
-    n = input()
-    v = [int(j) for j in input().split(' ')]
-
+def trouble_sort(v):
     # Separate the values on even and odd indexes
     v_ieven = []
     v_iodd = []
@@ -31,7 +26,17 @@ for i in range(1, t+1):
                 error = l
                 break
 
+    return 'OK' if valid else error
     if valid:
         print('Case #{}: OK'.format(i))
     else:
         print('Case #{}: {}'.format(i, error))
+
+def main():
+    t = int(input())
+
+    for i in range(1, t+1):
+        n = input()
+        v = [int(j) for j in input().split(' ')]
+        r = trouble_sort(v)
+        print('Case #{}: {}'.format(i, r))

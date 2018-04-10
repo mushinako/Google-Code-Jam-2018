@@ -1,7 +1,7 @@
 def fprint(*args, **kwargs):
     print(*args, flush=True, **kwargs)
 
-def do_test_case():
+def number_guessing():
     a, b = [int(s) for s in input().split(' ')]
     n = int(input())
 
@@ -16,14 +16,14 @@ def do_test_case():
             if k <= a:
                 raise ValueError('No candidate left!')
 
-        fprint(k, flush=True)
+        fprint(k)
 
         # Analyze feedback
         f = input()
         if f == "CORRECT":
-            return True
+            break
         elif f == "WRONG_ANSWER":
-            return False
+            assert False
         elif f == "TOO_BIG":
             b = k - 1
         elif f == "TOO_SMALL":
@@ -31,9 +31,11 @@ def do_test_case():
         else:
             raise ValueError(f + '. Feedback not expected!')
 
-t = int(input())
+def main():
+    t = int(input())
+    while t > 0:
+        number_guessing()
+        t -= 1
 
-while t > 0:
-    r = do_test_case()
-    assert r
-    t -= 1
+if __name__ == '__main__':
+    main()
