@@ -33,3 +33,6 @@ It's good enough; it runs fast enough; I'm lazy; it has much handled for me.
 ## Contribution!
 Contributions are greatly appreciated! Do a pull request, or just start your
 own repository! Lemme know if there are any errors in my solutions as well!
+
+## License
+This work is licensed under [CC BY-SA 4.0](./LICENSE.md).
