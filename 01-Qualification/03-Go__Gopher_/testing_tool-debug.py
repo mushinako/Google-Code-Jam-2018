@@ -45,7 +45,7 @@ LIST_OF_A = [10, 10, 10, 10, 10, 20, 20, 20, 20, 20, 200, 200, 200, 200, 200]
 NUM_TEST_CASES = len(LIST_OF_A)
 # You can set PRINT_INTERACTION_HISTORY to True to print out the interaction
 # history between your code and the judge.
-PRINT_INTERACTION_HISTORY = False
+PRINT_INTERACTION_HISTORY = True
 
 
 """Helper functions"""

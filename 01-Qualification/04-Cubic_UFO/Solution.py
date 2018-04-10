@@ -38,12 +38,13 @@ def cubic_ufo(a):
         q = PI3D(x=p.x, y=-p.y, z=-p.z)
         r = PI3D(y=-sin(theta)/2, z=cos(theta)/2)
 
-    output(i, [p, q, r])
+    return [p, q, r]
 
 def main():
     t = int(input())
     for i in range(1, t+1):
-        cubic_ufo(float(input()))
+        l = cubic_ufo(float(input()))
+        output(i, l)
 
 if __name__ == '__main__':
     main()

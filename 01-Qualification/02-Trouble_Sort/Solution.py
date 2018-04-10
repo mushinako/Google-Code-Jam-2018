@@ -1,4 +1,4 @@
-def trouble_sort(v):
+def trouble_sort(n, v):
     # Separate the values on even and odd indexes
     v_ieven = []
     v_iodd = []
@@ -36,7 +36,10 @@ def main():
     t = int(input())
 
     for i in range(1, t+1):
-        n = input()
+        n = int(input())
         v = [int(j) for j in input().split(' ')]
-        r = trouble_sort(v)
+        r = trouble_sort(n, v)
         print('Case #{}: {}'.format(i, r))
+
+if __name__ == '__main__':
+    main()

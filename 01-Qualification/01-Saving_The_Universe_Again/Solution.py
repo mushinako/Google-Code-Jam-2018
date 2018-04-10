@@ -2,7 +2,7 @@ def saving_the_universe_again(d, p):
     # Assuming all shoots damage 1, the shield can't stand it if
     # the number of shoots is greater than the shield strength
     if p.count('S') > d:
-        print('Case #{}: IMPOSSIBLE'.format(i))
+        return 'IMPOSSIBLE'
     else:
         s_index = []
         for j in range(len(p)):
@@ -11,7 +11,7 @@ def saving_the_universe_again(d, p):
 
         # If there are no shoots, no need to swap then
         if len(s_index) == 0:
-            print('Case #{}: 0'.format(i))
+            return 0
         else:
             s_damage = [2**s_index[0]]
             for k in range(1, len(s_index)):
@@ -34,7 +34,7 @@ def main():
     for i in range(1, t+1):
         n, s = input().split(' ')
         r = saving_the_universe_again(int(n), list(s))
-        print('Case #{}: {}'.format(i, swap))
+        print('Case #{}: {}'.format(i, r))
 
 if __name__ == '__main__':
     main()
