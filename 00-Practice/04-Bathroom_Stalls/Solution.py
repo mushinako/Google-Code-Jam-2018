@@ -17,7 +17,7 @@ def bathroom_stalls(n, k):
             n.append([(x[0]-1)//2, x[1]])
 
         # Reverse sort so that the larger blanks are at the front
-        n.sort(reverse=True)
+        n.sort(reverse=True, key=lambda l: l[0])
 
         # Combine the frequencies of same blank sizes
         q = [y[0] for y in n]
