@@ -8,10 +8,12 @@ Cruise Control (2017 1B, Prob. A), and Bathroom Stalls (2017 Qual, Prob. C) are
 from their respective archives.
 
 The solutions, unless indicated, passed all tests. Some folders include
-"Solution-submit.py", which is the solution that I submitted to the judge and,
-if present, had passed all test cases. The reason for a new "Solution.py" can
+"solution-submit.py", which is the solution that I submitted to the judge and,
+if present, had passed all test cases. The reason for a new "solution.py" can
 be one of many, as they might contain some performance boosts, or just that
-the one submitted does not meet my aesthetic standards.
+the one submitted does not meet my aesthetic standards. "solution-noveri.py"
+was not verified, for various reasons (obviously I did *not* overslept and
+missed a round).
 
 ## Why Python 3?
 It's good enough; it runs fast enough; I'm lazy; it has much handled for me.
@@ -29,6 +31,11 @@ It's good enough; it runs fast enough; I'm lazy; it has much handled for me.
 - [x] Trouble Sort
 - [x] Go, Gopher!
 - [x] Cubic UFO
+
+### 1A
+- [x] Waffle Choppers
+- [ ] Bit Party
+- [ ] Edgy Baking
 
 ## Contribution!
 Contributions are greatly appreciated! Do a pull request, or just start your
