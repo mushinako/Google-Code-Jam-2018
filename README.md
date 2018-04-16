@@ -13,7 +13,8 @@ if present, had passed all test cases. The reason for a new "solution.py" can
 be one of many, as they might contain some performance boosts, or just that
 the one submitted does not meet my aesthetic standards. "solution-noveri.py"
 was not verified, for various reasons (obviously I did *not* overslept and
-missed a round).
+missed a round). However, they are guaranteed to pass the limited test cases
+that are available as example.
 
 ## Why Python 3?
 It's good enough; it runs fast enough; I'm lazy; it has much handled for me.
