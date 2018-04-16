@@ -35,7 +35,7 @@ It's good enough; it runs fast enough; I'm lazy; it has much handled for me.
 
 ### 1A
 - [x] Waffle Choppers
-- [ ] Bit Party
+- [x] Bit Party
 - [ ] Edgy Baking
 
 ## Contribution!
